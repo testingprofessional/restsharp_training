@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "6+rHtauQonN8jC40eSDT206+vELJ5kU26v+qpRjIwkdzecY+iPdOdeyROLBTEOFvEr9JnEMVmBl+4wZNB83nUw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\quali\\Documents\\DotNet\\restSharpTesting\\restSharpTesting.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\quali\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\quali\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\quali\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\quali\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\quali\\.nuget\\packages\\restsharp\\109.0.1\\restsharp.109.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
