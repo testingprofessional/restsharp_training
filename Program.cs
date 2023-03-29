@@ -9,6 +9,7 @@ namespace restSharpTesting
 {
     class Program
     {
+      [Test]
         static void Main(string[] args)
         {
             string url = "https://jsonplaceholder.typicode.com/posts";
@@ -20,15 +21,17 @@ namespace restSharpTesting
 
             //request.AddObject(parameters);
 
-            request.AddParameter("id", "2");
-            request.AddParameter("id", "3");
+            //request.AddParameter("id", "2");
+            //request.AddParameter("id", "3");
+            request.AddQueryParameter("id", "2");
+            request.AddQueryParameter("id", "3");
             var response = client.Get(request);
             var jsonplaceholder = response.Content.ToString();
-            Console.WriteLine(response.GetType());
-            Console.WriteLine(jsonplaceholder.GetType());
+            Console.WriteLine("response.GetType(): " + response.GetType());
+            Console.WriteLine("jsonplaceholder.GetType(): " + jsonplaceholder.GetType());
 
             var obj = JsonConvert.DeserializeObject<dynamic>(response.Content);
-            Console.WriteLine("Object: " + obj[0].title);
+            Console.WriteLine("Object[0].title: " + obj[0].title);
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
@@ -43,9 +46,9 @@ namespace restSharpTesting
 }
 
 /*
-RestSharp.RestResponse
-System.String
-Object: qui est esse
+response.GetType(): RestSharp.RestResponse
+jsonplaceholder.GetType(): System.String
+Object[0].title: qui est esse
 Response: RestSharp.RestResponse
 jsonplaceholder: [
   {
@@ -58,7 +61,7 @@ jsonplaceholder: [
     "userId": 1,
     "id": 3,
     "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"       
+    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
   }
 ]
 */
